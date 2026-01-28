@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table.t1 {
+            /* border: 1px solid black; */
+            border-collapse: collapse;
+            height: 300px;
+            width: 300px;
+        }
+        
+        table.t1 td {
+            border: 1px solid black;
+            text-align: center; /* Alinhamento horizontal*/
+            vertical-align: top ; 
+        }  
+
+        table.t2 {
+            border-collapse: collapse;
+            /* width: 300px; */
+            text-align: center;
+            position: relative;
+        }
+
+        table.t2 th, table.t2 td {
+            border: 1px solid black;
+            padding: 5px;
+        }
+
+        table.t2 > thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: grey;
+        }
+
+        table.t2 thead tfoot {
+            background-color: rgb(197, 197, 197);
+        }
+
+        table.t2 td.num {
+            text-align: right;
+        }
+
+        table.t2 caption {
+            text-align: left;
+            padding-bottom: 5px;
+        }
+
+        table.t2 tbody > tr:nth-child(2n) {
+            background-color: lightgray;
+        }
+
+        table.t3 {
+            border-collapse: collapse;
+            width: 300px;
+            text-align: center;
+        }
+
+        table.t3 td {
+            border: 1px solid black ;
+            padding: 10px;
+        }
+
+        table.t4 {
+            width: 300px;
+            text-align: center;
+            border-collapse: collapse;
+        }
+
+        table.t4 td, table.t4 th {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+    </style>
+
+</head>
+<body>
+    <h1>Tabelas</h1>
+    <!--
+        HIERARQUIA DE TABELAS (SIMPLES)
+        TABLE = Tabela
+                TABLE ROW = Linha da tabela
+                TABLE HEADER = Cabeçalho de tabela
+                TABLE DATA = Dado de tabela
+
+        TABELAS COMPLEXAS (GRANDES)
+                CAPTION                
+                THEAD
+                    RT, TD, TH
+                TBODY
+                    RT, TD, TH
+                TFOOT
+                    RT, TD, TH
+     -->
+
+    <table class="t1"> 
+        <th>
+            <td>col1</td>
+            <td>col2</td>
+            <td>col3</td>
+        </th>
+        <tr>
+            <td>A1</td>
+            <td>A2</td>
+            <td>A3</td>
+        </tr>
+        <tr>
+            <td>B1</td>
+            <td>B2</td>
+            <td>B3</td>
+        </tr>
+        <tr>
+            <td>C1</td>
+            <td>C2</td>
+            <td>C3</td>
+        </tr>
+    </table>
+
+    <br>
+    
+    <table class="t2">
+        <CAption>População das seguintes cidades:</CAption>
+        <thead>
+            <tr>
+                <th scope="col" style="width: 200px;">Estado</th>
+                <th scope="col" style="width: 100px;">População</th>
+            </tr>
+            <tbody>
+                <tr>
+                    <td>São Paulo</td>
+                    <td class="num">45 973 194</td>
+                </tr>
+                <tr>
+                    <td>Paraná</td>
+                    <td class="num">11 824 665</td>
+                </tr>
+                <tr>
+                    <td>Mato Grosso</td>
+                    <td class="num">3 836 399</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th scope="row">Total</th>
+                    <td><strong>11 824 665</strong></td>
+                </tr>
+            </tfoot>
+    </table>
+        
+        <br>
+        
+    <table class="t3">
+        <tr>
+            <td>A</td>
+            <td colspan="2">B</td>
+        </tr>
+        <tr>
+            <td rowspan="3">D</td>
+            <td>E</td>
+            <td rowspan="2">F</td>
+        </tr>
+        <tr>
+            <td>H</td>
+        </tr>
+        <tr>
+            <td colspan="2">K</td>
+        </tr>
+    </table>
+
+    <br>
+
+    <table class="t4">
+        <thead>
+            <tr>
+                <th>C</th>
+                <th>C</th>
+                <th>C</th>
+            </tr>
+        </thead>
+        <tbody> 
+            <tr>
+                <td>A1</td>
+                <td colspan="2" rowspan="2">A2</td>
+            </tr>
+            <tr>
+                <td>B1</td>
+            </tr>
+        </tbody>
+
+    </table>
+
+</body>
+</html>
