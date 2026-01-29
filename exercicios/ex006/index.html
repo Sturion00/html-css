@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela de Filmes</title>
+    <style>
+        
+        body {
+            background-color: rgb(60, 61, 70);
+            
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 600px;
+            padding: 10px;
+            box-shadow: 3px 3px 8px 1px #0000005c;
+            margin: 50px;
+        }
+
+        caption {
+            margin-left: 5px ;
+            border-radius: 10px 10px 0 0;
+            padding: 5px;
+            width: 165px;
+            font-size: 0.9em;
+            background-color: #6FBFF5;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: bolder;
+        }
+
+        td, th {
+            padding: 5px;
+        }
+
+        th {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background-color: #6FBFF5;
+            font-size: 1.1em;
+        }
+
+        td {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #E3F2FD;
+            border: 1px solid #BCE1FA;
+        }
+
+        .filmes {
+            text-align: center;
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <table>
+
+        <caption>Lista de Filmes Favoritos</caption>
+
+        <thead>
+            <tr>
+                <th>GRUPO</th>
+                <th>NOME</th>
+                <th colspan="3">FILME</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th rowspan="3">Mulheres</th>
+                <td>Ana Maria Santos</td>
+                <td class="filmes">Alien</td>
+                <td class="filmes">Rambo</td>
+                <td class="filmes">Vingadores</td>
+            </tr>
+            <tr>
+                <td>Beatriz Souza</td>
+                <td class="filmes">Hulk</td>
+                <td class="filmes">Inception</td>
+                <td class="filmes">Batman</td>
+            </tr>
+            <tr>
+                <td>Claudia Melo</td>
+                <td class="filmes">Oblivion</td>
+                <td class="filmes">Matrix</td>
+                <td class="filmes">Big Hero</td>
+            </tr>
+            <tr>
+                <th rowspan="3">Homens</th>
+                <td>Bruno Mendonça</td>
+                <td class="filmes">Intocáveis</td>
+                <td class="filmes">Amnésia</td>
+                <td class="filmes">Gladiador</td>
+            </tr>
+            <tr>
+                <td>Daniel Lourenço</td>
+                <td class="filmes">Wall-E</td>
+                <td class="filmes">Oldboy</td>
+                <td class="filmes">Dangal</td>
+            </tr>
+            <tr>
+                <td>Fabiano Mota</td>
+                <td class="filmes">Star Wars 5</td>
+                <td class="filmes">Taxi Draver</td>
+                <td class="filmes">Toy Store</td>
+            </tr>
+        </tbody>
+    </table>    
+</body>
+</html>
