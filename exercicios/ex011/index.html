@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <h1>Forulário</h1>
+    <form action="cadastro.php" method="post" autocomplete="on">
+        <fieldset>
+            <legend>Preencha os Campos:</legend>
+            <p>
+                <label for="iest">Estado: </label>
+                <select name="estado" id="iestado" required>
+                    <option value="">---Selecione o estado---</option>
+                    <optgroup label="----- Sudeste -----">
+                            <option value="SP">São Paulo</option>
+                            <option value="MG">Paraná</option>
+                            <option value="SN">Espirito Santo</option>
+                        </option>
+                    </optgroup>
+                    <optgroup label="----- Sul -----">
+                        <option value="PR">Paraná</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                    </optgroup>
+                </select>
+            </p>
+            <p>
+                <label for="iprof">Profissão: </label>
+                <input type="text" name="prof" id="iprof" list="lstprof" required>
+                <datalist id="lstprof">
+                    <option value="prof">Programador</option>
+                    <option value="musc">Musico</option>
+                    <option value="Vend">Vendedor</option>
+                    
+                    <!--<option> Programador </option>
+                    <option> Musico </option>
+                    <option> Vendedor </option>-->
+                    
+                    <!-- O elemento option pode ser usado com ou sem o atributo value!!! -->
+                    
+                </datalist>
+            </p>
+
+            <p>
+                <label for="imens">Mensagem</label>
+                <br>
+                <textarea name="mens" id="imens" cols="30" rows="5" required placeholder="Escreva aqui..."></textarea>
+            </p>
+        </fieldset>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Resetar">
+        </p>
+    </form>
+</body>
+</html>
