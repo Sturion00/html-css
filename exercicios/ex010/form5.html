@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+<body>
+
+    <form action="#" method="get" autocomplete="on">
+        <fieldset>
+
+        <legend>Sexo</legend>
+
+            <input type="radio" name="sex" id="imasc" value="masculino" checked required>
+            <label for="imasc">Masculino</label>
+            <br>
+
+            <input type="radio" name="sex" id="ifemi" value="feminimo" required>
+            <label for="ifemi">Feminino</label>
+
+        </fieldset>
+        <fieldset>
+
+            <legend>Esportes</legend>
+
+            <input type="checkbox" name="fut" id="ifut">
+            <label for="ifut">Futebol</label>
+            <br>
+
+            <input type="checkbox" name="vol" id="ivol">
+            <label for="ivol">Vôlei</label>
+            <br>
+
+            <input type="checkbox" name="cor" id="icor">
+            <label for="icor">Corrida</label>
+            <br>
+
+        </fieldset>
+        <fieldset>
+            <legend>Cor, Nivel</legend>
+
+            <label for="icorr">Selecione a cor:</label>
+            <br>
+            <input type="color" name="cor" id="icorr" value="#00ff00">
+            <br>
+            <br>
+
+            <label for="inivel">Selecione um valor:</label>
+            <br>
+            <input type="range" name="nivel" id="inivel" min="1" max="5" value="1">
+
+        </fieldset>
+    </form>
+</body>
+</html>
