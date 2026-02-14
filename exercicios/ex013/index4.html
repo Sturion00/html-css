@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex</title>
+    <style>
+        * {
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        h2 {
+            margin-top: 100px;
+        }
+
+        fieldset p {
+            font-size: .8em;
+        }
+        
+        .container {
+            background-color: rgb(89, 156, 243);
+            margin: 20px 0;
+
+            display: flex;
+        }
+
+        div.container#ctn1 {
+            justify-content: space-between;
+        }
+        
+        div.container#ctn2 {
+            justify-content: space-around;
+        }
+
+        div.container#ctn3 {
+            justify-content: space-evenly;
+        }
+
+        div.container#ctn4{
+            height: 300px;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        .item {
+            background-color: rgb(241, 85, 33);
+            color: white;
+            padding: 0 5px;
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        div.container#ctn4 > div.item {
+            display: flex;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>Justfy Content</h1>
+    <fieldset>
+        <legend>Space Between</legend>
+        <div class="container" id="ctn1">
+            <div class="item"><strong>A</strong></div>
+            <div class="item"><strong>B</strong></div>
+            <div class="item"><strong>C</strong></div>
+            <div class="item"><strong>D</strong></div>
+            <div class="item"><strong>E</strong></div>
+            <div class="item"><strong>F</strong></div>
+            <div class="item"><strong>G</strong></div>
+            <div class="item"><strong>H</strong></div>
+            <div class="item"><strong>I</strong></div>
+            <div class="item"><strong>J</strong></div>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>Space Around</legend>
+        <div class="container" id="ctn2">
+            <div class="item"><strong>A</strong></div>
+            <div class="item"><strong>B</strong></div>
+            <div class="item"><strong>C</strong></div>
+            <div class="item"><strong>D</strong></div>
+            <div class="item"><strong>E</strong></div>
+            <div class="item"><strong>F</strong></div>
+            <div class="item"><strong>G</strong></div>
+            <div class="item"><strong>H</strong></div>
+            <div class="item"><strong>I</strong></div>
+            <div class="item"><strong>J</strong></div>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>Space Evenly</legend>
+        <div class="container" id="ctn3">
+            <div class="item"><strong>A</strong></div>
+            <div class="item"><strong>B</strong></div>
+            <div class="item"><strong>C</strong></div>
+            <div class="item"><strong>D</strong></div>
+            <div class="item"><strong>E</strong></div>
+            <div class="item"><strong>F</strong></div>
+            <div class="item"><strong>G</strong></div>
+            <div class="item"><strong>H</strong></div>
+            <div class="item"><strong>I</strong></div>
+            <div class="item"><strong>J</strong></div>
+        </div>
+    </fieldset>
+    <h2>Align itens + Justfy Content</h2>
+    <fieldset id="fld4">
+        <p>O align-itens alinha no eixo transversal, já o justfy-contente alinha no eixo principal.</p>
+        <legend>Junção do Dois</legend>
+        <div class="container" id="ctn4">
+            <div class="item"><strong>A</strong></div>
+            <div class="item"><strong>B</strong></div>
+            <div class="item"><strong>C</strong></div>
+            <div class="item"><strong>D</strong></div>
+            <div class="item"><strong>E</strong></div>
+            <div class="item"><strong>F</strong></div>
+            <div class="item"><strong>G</strong></div>
+            <div class="item"><strong>H</strong></div>
+            <div class="item"><strong>I</strong></div>
+            <div class="item"><strong>J</strong></div>
+        </div>
+    </fieldset>
+</body>
+</html>
