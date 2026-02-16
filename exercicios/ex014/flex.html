@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Box</title>
+    <style>
+        * {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        main {
+            background-color: bisque;
+            width: 100vw;
+            height: 100vh;
+        }
+        
+        fieldset {
+            max-width: 1024px;
+            margin: auto;
+            border-radius: 5px;
+        }
+
+        section {
+            background-color: cornflowerblue;
+            height: 300px;
+            border-radius: 5px;
+
+        }
+        
+        .container {
+            background-color: rgba(219, 127, 255, 0.589);
+            border: 1px solid black;
+            border-radius: 5px;
+            
+            display: flex;
+            flex-flow: row nowrap;
+        }
+
+        .item {
+            background-color: brown;
+            text-align: center;
+            padding: 5px;
+            color: white;
+            border: 1px solid;
+            border-radius: 5px;
+
+            /* flex-basis: 150px; */
+        }
+
+        #it1 {
+            flex-shrink: 0;
+            flex-grow: 0;
+        }
+
+        #it2 {
+            flex-shrink: 1;
+            flex-grow: 1;
+        }
+        
+        #it3 {
+            flex-shrink: 4;
+            flex-grow: 4;
+        }
+
+        /* ------------------------- */
+
+        #it4 {
+            flex-shrink: 4;
+            flex-grow: 4;
+        }
+
+        #it5 {
+            flex-shrink: 1;
+            flex-grow: 1;
+        }
+
+        #it6 {
+            flex-shrink: 0;
+            flex-grow: 0;
+        }
+
+        /* ------------------------- */
+
+        #it7 {
+            flex: 4 0 150px;
+        }
+
+        #it8 {
+            flex: 1 4 150px;
+        }
+
+        #it9 {
+            flex: 0 1 auto;
+        }
+
+        /* 
+            flex: 0 1 auto;
+            flex: initial;
+            ---------------
+
+            flex: 0 0 auto;
+            flex: none;
+            ---------------
+
+            flex: 1 1 auto;
+            flex: auto;
+            ---------------
+
+            --valroes solitarios em 'flex: ;'--
+            flex: 3;
+            flex: 3 1 auto;
+        */
+        
+
+    </style>
+
+</head>
+<body>
+    <main>
+        <h1>Treino com Flex-Box</h1>
+    <Fieldset>
+        <legend>Flex-Box</legend>
+        <section>
+            <div class="container" id="ctn1">
+                <div class="item" id="it1"><strong>A</strong></div>
+                <div class="item" id="it2"><strong>B</strong></div>
+                <div class="item" id="it3"><strong>C</strong></div>
+            </div>
+            <div class="container" id="ctn2">
+                <div class="item" id="it4"><strong>D</strong></div>
+                <div class="item" id="it5"><strong>E</strong></div>
+                <div class="item" id="it6"><strong>F</strong></div>
+            </div>
+            <div class="container" id="ctn3">
+                <div class="item" id="it7"><strong>G</strong></div>
+                <div class="item" id="it8"><strong>H</strong></div>
+                <div class="item" id="it9"><strong>I</strong></div>
+            </div>
+        </section>
+    </Fieldset>
+    </main>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex box</title>
+    <style>
+        * {
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: darksalmon;
+            padding: 10px 20px;
+            border-bottom-right-radius: 20px;
+            border-top-right-radius: 20px;
+            max-width: 1024px;
+            margin-bottom: 3vh;
+        }
+
+        fieldset {
+            background-color: antiquewhite;
+            width: 90vw;
+            height: 95vh;
+            max-width: 1024px;
+            margin: auto;
+            border-radius: 5px;
+            border: none;
+        }
+
+        div.container {
+            background-color: rgb(30, 139, 143);
+            height: 85%;
+            width: 90%;
+            border-radius: 5px;
+            padding: 10px;
+            margin: auto;
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.137);
+
+            display: flex;
+            flex-flow: row  wrap;
+            justify-content: space-evenly;           /* Alinha os itens no main-axis. Valores possiveis --> center; space-around; space-between; space-evenly */
+            align-items: center;               /* Alinha os itens no cross-axis. Valor padrão: stretch. Valores possiveis --> stretch; center; flex-start; flex-end */
+
+            align-content: center;             /* Define como os itens vão se comportar no espaço que o 'flex-flow: wrap;' gera. Valores possiveis --> center; flex-start;flex-end; space-between; space-around; space-evenly */
+        }
+
+        div.container > div.item {
+            background-color: rgb(235, 90, 23);
+            border-radius: 5px;
+            border: 1px solid white;
+            color: white;
+            padding: 20px;
+            flex-basis: 100px;
+            flex-shrink: 1;
+            flex-grow: 1;
+        }
+        
+        
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Exercico de Alinhamento</h1>
+        <h2 style="text-indent: 30px;">Flex-Box</h2>
+    </header>
+
+    <fieldset id="fld">
+
+        <p style="text-indent: 20px; margin: 10px 10px 25px 10px; text-align: justify;">O <strong>'align-items'</strong> alinha no eixo transversal, o <strong>'justfy-content'</strong> alinha no eixo principal e o <strong>'align-content'</strong> trabalha o conteudo na parte vazia com o wrap ativado.</p>
+
+        <legend style="background-color: darksalmon; border-radius: 5px; margin-left: 20px; padding: 3px;"><strong>Instruções:</strong></legend>
+
+        <div class="container" id="ctn">
+            <div class="item" id="i1"><strong>A</strong></div>
+            <div class="item" id="i2"><strong>B</strong></div>
+            <div class="item" id="i3"><strong>C</strong></div>
+            <div class="item" id="i4"><strong>D</strong></div>
+            <div class="item" id="i5"><strong>E</strong></div>
+
+            
+        </div>
+    </fieldset>
+</body>
+</html>
